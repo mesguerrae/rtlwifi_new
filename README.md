@@ -23,7 +23,7 @@ If any of the packets above are not found check if your distro installs them lik
 ##### Installation
 For all distros:
 ```bash
-git clone https://github.com/lwfinger/rtlwifi_new.git -b rtw88
+git clone https://github.com/mesguerrae/rtlwifi_new.git
 cd rtlwifi_new
 make
 sudo make install
