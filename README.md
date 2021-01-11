@@ -81,3 +81,30 @@ linux-wireless@vger.kernel.org. Include a detailed description of any messages i
 logs and any steps that you have taken to analyze or fix the problem. If your description is
 not complete, you are unlikely to get any satisfaction.
 
+*********************************************************************************************
+Para su instalación seguiremos los siguientes pasos:
+
+ sudo apt install git build-essential dkms git clone -b extended https://github.com/lwfinger/rtlwifi_new.git sudo dkms add ./rtlwifi_new sudo dkms install rtlwifi-new/0.6 sudo modprobe -r rtl8723de && sudo modprobe rtl8723de
+1
+2
+3
+4
+5
+6
+7
+8
+9
+sudo apt install git build-essential dkms
+ 
+git clone-bextended https://github.com/lwfinger/rtlwifi_new.git
+ 
+sudo dkms add./rtlwifi_new
+ 
+sudo dkms install rtlwifi-new/0.6
+ 
+sudo modprobe-rrtl8723de&&sudo modprobe rtl8723de
+En general con el primer paso ya lo tendreis solucionado, en algunos casos deberemos se ejecutar el siguiente comando alternando el número 3, por 1, 2 o 3 para cambiar la señal:
+
+ echo "options rtl8723de ant_sel=3" | sudo tee /etc/modprobe.d/rtl8723de.conf
+1
+echo"options rtl8723de ant_sel=3"|sudo tee/etc/modprobe.d/rtl8723de.conf
