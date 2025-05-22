@@ -76,7 +76,7 @@ rtw_pci-objs                  := pci.o
 ccflags-y += -D__CHECK_ENDIAN__
 
 all: 
-	$(MAKE) -C $(KSRC) M=$(PWD) modules
+	$(MAKE) -j$(nproc) -C $(KSRC) M=$(PWD) modules
 install: all
 ifeq (,$(wildcard ./backup_drivers.tar))
 	@echo Making backups
